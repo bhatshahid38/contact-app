@@ -7,7 +7,6 @@ const headers = {
 module.exports.createContact = async (data) => {
   
   try {
-    debugger
     // Make the POST request to create the contact
     const response = await axios({
       method:"post",
@@ -21,7 +20,7 @@ module.exports.createContact = async (data) => {
     return response.data;
   } catch (error) {
     console.error('Error creating contact:', error.response.data);
-    throw error;
+    throw error.response.data;
   }
 };
 
@@ -64,7 +63,7 @@ module.exports.putContact = async (dataObj,contactId) => {
     );;
     return response.data;
   } catch (error) {
-    console.error('Error creating contact:', error.message);
+    console.error('Error creating contact:', error.response.data);
     throw error;
   }
 };

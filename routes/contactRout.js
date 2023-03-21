@@ -4,5 +4,5 @@ const router = express.Router()
 module.exports = router
 router.post("/createContact",createContact)
 router.post("/getContact",getcontact)
-router.post("/updateContact/:id",update)
-router.post("/deleteContact/:id",deletecontact)
+router.post("/updateContact",update)
+router.post("/deleteContact",deletecontact)
