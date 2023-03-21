@@ -64,7 +64,7 @@ module.exports.update = async (req,res)=>{
         if(!targetcontact){
             res.json({message:"contact not found"})
         }
-        const updatedcontact = await modal.findByIdAndUpdate(id,data,{new:true,runValidators:true,useFindAndModify:false})
+        const updatedContact = await modal.findByIdAndUpdate(id,data,{new:true,runValidators:true,useFindAndModify:false})
     
         res.json(updatedContact);
     }
