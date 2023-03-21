@@ -10,8 +10,8 @@
     cd contact-app
     npm install
 
-Mongo Db runs at 127.0.0.1:27017
-Update freshWorkApiKey in config/Constants.js
+* Mongo Db runs at 127.0.0.1:27017
+* Update freshWorkApiKey in config/Constants.js
 
 ## API Endpoints
 
