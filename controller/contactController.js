@@ -85,7 +85,7 @@ module.exports.deletecontact = async (req,res) =>{
         if(!targetcontact){
             res.json({message:"not found"})
         }
-        modal.deleteOne(targetcontact)
+        await modal.deleteOne(targetcontact)
         res.json({message:"successfull deleted"})
     }
     else{
