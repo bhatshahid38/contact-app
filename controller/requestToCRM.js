@@ -38,7 +38,6 @@ module.exports.createContact = async (data) => {
       },
     });
     console.log('contact fetched successfully:', response.data);
-
     return response.data;
 
   } catch (error) {
@@ -62,11 +61,25 @@ module.exports.putContact = async (dataObj,contactId) => {
       url :updateurl,
       headers,
       data:dataObj}
-    );
-    console.log('Contact fetched successfully:', response.data);
+    );;
     return response.data;
   } catch (error) {
     console.error('Error creating contact:', error.message);
     throw error;
   }
 };
+module.exports.deleteContact = async (id)=>{
+  let deleteUrl  = `${apiUrl}/${id}`
+  try{ const response = await axios(
+    {method:"delete",
+    url:deleteUrl,
+    headers}
+  )
+  return 
+}
+  catch(err){
+    console.error('Error creating contact:', err.message);
+
+  }
+   
+}

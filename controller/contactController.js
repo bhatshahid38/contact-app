@@ -1,5 +1,5 @@
 const modal = require("../modal/contactSechema")
-const{ putContact, getContact,createContact}= require("./requestToCRM");
+const{ putContact, getContact,createContact,deleteContact}= require("./requestToCRM");
 
 module.exports.createContact = async (req,res)=>{
     const {first_name, last_name, email, mobile_number, data_store} = req.body;
@@ -54,7 +54,8 @@ module.exports.update = async (req,res)=>{
     const{first_name,email,data_store} = req.body
     const data = {first_name,email}
     if(data_store =="CRM"){
-        putContact(data,req.params.id)
+        const newdata = await putContact(data,req.params.id)
+        res.json({newdata})
     }
     else{
         const targetvalue = req.params.id
@@ -72,7 +73,13 @@ module.exports.update = async (req,res)=>{
     
 }
 module.exports.deletecontact = async (req,res) =>{
-    console.log(req, res);
+    const{data_store} = req.body
+    if(data_store=="CRM"){
+        const deleted  = await deleteContact(req.params.id)
+        res.json({message:"deleted"})
+
+
+    }
         const targetcontact = await modal.findById(req.params.id)
         if(!targetcontact){
             res.json({message:"not found"})
