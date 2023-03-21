@@ -1,10 +1,10 @@
 # CRUD Application using FreshSales API and Mongo DB
 
 ## Technologies Used
-NodeJS
-ExpressJS
-MongoDB
-FreshSales CRM API
+* NodeJS
+* ExpressJS
+* MongoDB
+* FreshSales CRM API
 
 ### Installation and Usage
     cd contact-app
