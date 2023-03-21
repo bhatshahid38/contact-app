@@ -1,8 +1,5 @@
 # CRUD Application using FreshSales API and Mongo DB
 
-## DEMO
-![Demo_Contact_APP](https://user-images.githubusercontent.com/122678904/226701438-2956cc5f-340b-4c82-8b6c-7fae2f746981.gif)
-
 ## Technologies Used
 * NodeJS
 * ExpressJS
@@ -74,5 +71,8 @@ Response:
 
 Conclusion
 That's it! You now have a fully functional CRUD application that allows you to create, retrieve, update, and delete contacts in Freshsales CRM or MongoDB. Feel free to modify the application as needed to fit your requirements.
+
+## DEMO
+![Demo_Contact_APP](https://user-images.githubusercontent.com/122678904/226701438-2956cc5f-340b-4c82-8b6c-7fae2f746981.gif)
 
 
