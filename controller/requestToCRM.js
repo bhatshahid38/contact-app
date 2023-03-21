@@ -1,5 +1,5 @@
 const axios = require('axios');
-const{freshWorkApiKey,freshWorkApiUrl:apiUrl} = require("./Constants")
+const{freshWorkApiKey,freshWorkApiUrl:apiUrl} = require("../config/Constants")
 const headers = {
   'Authorization': `Token token=${freshWorkApiKey}`,
   'Content-Type': 'application/json'

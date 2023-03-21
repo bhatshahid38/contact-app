@@ -1,6 +1,6 @@
 const modal = require("../modal/contactSechema")
 const{ putContact, getContact,createContact,deleteContact}= require("./requestToCRM");
-const {CRM, DATABASE} = require("./Constants");
+const {CRM, DATABASE} = require("../config/Constants");
 module.exports.createContact = async (req,res)=>{
     const {first_name, last_name, email, mobile_number, data_store} = req.body;
     if (!first_name || !last_name || !email || !mobile_number || !data_store) {
