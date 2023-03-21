@@ -66,9 +66,7 @@ module.exports.update = async (req,res)=>{
         }
         const updatedcontact = await modal.findByIdAndUpdate(id,data,{new:true,runValidators:true,useFindAndModify:false})
     
-        res.json({message:"ok",
-        updatedcontact
-        });
+        res.json(updatedContact);
     }
     else{
         return res.status(400).send('Not a valid data_store');
@@ -83,7 +81,7 @@ module.exports.deletecontact = async (req,res) =>{
         res.json(deleted)
     }
     else if(data_store === DATABASE){
-        const targetcontact = await modal.findById(contact_id)
+        const targetcontact = await modal.findById(id)
         if(!targetcontact){
             res.json({message:"not found"})
         }

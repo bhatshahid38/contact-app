@@ -69,15 +69,16 @@ module.exports.putContact = async (dataObj,contactId) => {
 };
 module.exports.deleteContact = async (id)=>{
   let deleteUrl  = `${apiUrl}/${id}`
-  try{ const response = await axios(
-    {method:"delete",
-    url:deleteUrl,
-    headers}
-  )
-  return 
+  try{ 
+      const response = await axios(
+      { method:"delete",
+        url:deleteUrl,
+        headers
+      });
+  return  response.data
 }
   catch(err){
-    console.error('Error creating contact:', err.message);
+    console.error('Error creating contact:', err.response.data);
 
   }
    
