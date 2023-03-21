@@ -1,23 +1,21 @@
-```
-CRUD Application using FreshSales API and Mongo DB
+# CRUD Application using FreshSales API and Mongo DB
 
-```
-Technologies Used
-NodeJS
-ExpressJS
-MongoDB
-FreshSales CRM API
+## Technologies Used
+* NodeJS
+* ExpressJS
+* MongoDB
+* FreshSales CRM API
 
-Installation and Usage
+### Installation and Usage
     cd contact-app
     npm install
 
 Mongo Db runs at 127.0.0.1:27017
 Update freshWorkApiKey in config/Constants.js
 
-API Endpoints
+## API Endpoints
 
-1. Create Contact
+### 1. Create Contact
 Create a new contact in Freshsales CRM or MongoDB.
 POST /createContact
 Parameters:
@@ -31,7 +29,7 @@ Response:
 - If the contact is created successfully, returns the contact data.
 - If there is an error, returns an error message.
 
-2. Get Contact
+### 2. Get Contact
 Retrieve a contact by its ID from Freshsales CRM or MongoDB.
 
 POST /getContact
@@ -44,7 +42,7 @@ Response:
 - If the contact is found, returns the contact data.
 - If the contact is not found, returns an error message.
 
-3. Update Contact
+### 3. Update Contact
 Update the email and mobile number of a contact in Freshsales CRM or MongoDB.
 
 POST /updateContact
@@ -59,7 +57,7 @@ Response:
 - If the contact is updated successfully, returns the updated contact data.
 - If there is an error, returns an error message.
 
-4. Delete Contact
+### 4. Delete Contact
 Delete a contact by its ID from Freshsales CRM or MongoDB.
 POST /deleteContact
 
